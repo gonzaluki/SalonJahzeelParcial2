@@ -1,6 +1,6 @@
 import Subscription from "../models/Subscription.js";
 
-// POST suscribirse
+// crear suscripción
 export const subscribe = async (req, res) => {
   try {
     const { email } = req.body;
@@ -19,7 +19,7 @@ export const subscribe = async (req, res) => {
   }
 };
 
-// GET todas las suscripciones (para CRUD)
+// obtener todas las suscripciones
 export const getSubscriptions = async (req, res) => {
   try {
     const subs = await Subscription.find();
@@ -29,7 +29,7 @@ export const getSubscriptions = async (req, res) => {
   }
 };
 
-// DELETE eliminar suscripción
+//  eliminar suscripción
 export const deleteSubscription = async (req, res) => {
   try {
     await Subscription.findByIdAndDelete(req.params.id);

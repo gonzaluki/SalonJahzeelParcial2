@@ -1,6 +1,6 @@
 import express from "express";
 import {
-  subscribe,
+  createSubscription,
   getSubscriptions,
   deleteSubscription
 } from "../controllers/subscriptionController.js";
@@ -8,7 +8,7 @@ import {
 const router = express.Router();
 
 router.get("/", getSubscriptions);
-router.post("/", subscribe);
+router.post("/", createSubscription);
 router.delete("/:id", deleteSubscription);
 
 export default router;

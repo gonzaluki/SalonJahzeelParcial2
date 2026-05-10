@@ -1,7 +1,7 @@
 import Subscription from "../models/Subscription.js";
 
 // crear suscripción
-export const subscribe = async (req, res) => {
+export const createSubscription = async (req, res) => {
   try {
     const { email } = req.body;
 
